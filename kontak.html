@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kontak & pemasaran - poliban digicraft studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-             <h1>Poliban DigiCraft Studio</h1>
-             <p>Solusi Transformasi Bisnis Digital anda di Banjarmasin</p>
-             <hr>
-             <nav>
+            <h1>Poliban DigiCraft Studio</h1>
+            <p>Solusi Transformasi Bisnis Digital anda di Banjarmasin</p>
+            <hr>
+            <nav>
                 <a href="BIODATA HUMAIRI.html"><b>Tentang Founder</b></a> |
                 <a href="produk.html"><b>katalog jasa & paket harga</b></a> |
                 <a href="kontak.html"><b>kontak & pemesanan</b></a>
-             </nav>
-         </div>
+            </nav>
+        </div>
     </header>
-     <hr>
-     <main>
+    <hr>
+    <main>
         <h2>formulir pemesanan jasa & layanan pelanggan</h2>
-        <p>silahkan isi formulir di bawah ini untuk mengajukan pemesanan pake jasa atau berkunsultasi dengan tim ahli kami</p>
+        <p>silahkan isi formulir di bawah ini untuk mengajukan pemesanan pake jasa atau berkunsultasi dengan tim ahli
+            kami</p>
 
         <form action="#" method="post">
-        <fieldset>
-            <legend><b>1. informasi identitas pemesanan</b></legend>
+            <fieldset>
+                <legend><b>1. informasi identitas pemesanan</b></legend>
+                <br>
+                <label for="nama">NAMA LENGKAP</label><br>
+                <input type="text" id="nama" name="nama" placeholder="CONTOH : AYI" size="40" required>
+                <br><br>
+
+                <label for="email">ALAMAT EMAIL</label><br>
+                <input type="text" id="email" name="email" placeholder="CONTOH :AYI@GMAIL.COM" size="40" required>
+                <br><br>
+
+                <label for="wa">NOMOR WA</label><br>
+                <input type="text" id="wa" name="wa" placeholder="CONTOH :08....." size="40" required>
+                <br><br>
+
+                <label>tipe kategori klien:</label><br>
+                <input type="radio" id="kategori_personal" name="tipe_klien" value="personal" checked>
+                <label for="katagori_personal">perorangan / UMKM</label>&nbsp;&nbsp;
+                <input type="radio" id="kategori_korporat" name="tipe_klien" value="korporat">
+                <label for="kategori_korporat">perusahaan / instansi pemerintah</label>
+                <br><br>
+            </fieldset>
+            <fieldset>
+                <legend><b>2. rincian pemesanan jasa digital</b></legend>
+                <br>
+                <label for="pilih_paket">pilih paket layanan (lihat katalog di halaman produk)</label>
+                <br>
+                <select name="pilih_paket" id="pilih_paket" required>
+                    <option value="">--pilih jasa paket--</option>
+                    <option value="silver">paket silver branding (Rp 1.500.000)</option>
+                    <option value="gold">paket gold web development (Rp 3.000.000)</option>
+                    <option value="platinum">paket platinum full digital transformation (Rp 5.000.000)</option>
+                    <option value="custom">konsultasi custom project</option>
+                </select>
+                <br><br>
+
+                <label for="">layanan tambahan (add-ons)</label>
+                <br>
+                <input type="checkbox" id="addon_seo" name="addons[]" value="SEO optimization">
+                <label for="addon_seo">optimasi SEO on_page (=Rp 500.000)</label>
+                <br>
+                <input type="checkbox" id="addon_express" name="addons[]" value="Express Delivery">
+                <label for="addon_express">pengerjaan kilat 3 hari (+Rp 750.000)</label>
+                <br>
+                <input type="checkbox" id="addon_content" name="addons[]" value="Content writig">
+                <label for="addon_content">penulisan konten arikal & copywriting (+Rp 400.000)</label>
+                <br><br>
+
+                <label for="target_selesai">Estimasi target selesai</label>
+                <input type="date" id="target_selesai" name="target_selesai">
+                <br><br>
+
+                <label for="detail_pesan">Deskripsi / Cataan Khusus Proyek</label><br>
+                <textarea name="detail_pesan" id="detail_pesan" rows="6" cols="50"
+                    placeholder="tuliskna gambaran singkat mengenai proyek yang anda inginkan..."></textarea>
+                <br><br>
+            </fieldset>
             <br>
-            <label for="nama">NAMA LENGKAP</label><br>
-            <input type="text" id="nama" name="nama" placeholder="CONTOH : AYI" size="40" required>
-            <br><br>
 
-            <label for="email">ALAMAT EMAIL</label><br>
-            <input type="text" id="email" name="email" placeholder="CONTOH :AYI@GMAIL.COM" size="40" required>
-            <br><br>
+            <button type="sumbit">kirim pesanan sekarang</button>&nbsp;
+            <button type="reset">bersihkan formulir</button>
 
-            <label for="wa">NOMOR WA</label><br>
-            <input type="text" id="wa" name="wa" placeholder="CONTOH :08....." size="40" required>
-            <br><br>
-
-            <label>tipe kategori klien:</label><br>
-            <input type="radio" id="kategori_personal" name="tipe_klien" value="personal" checked>
-            <label for="katagori_personal">perorangan / UMKM</label>&nbsp;&nbsp;
-            <input type="radio" id="kategori_korporat"
-            name="tipe_klien" value="korporat">
-            <label for="kategori_korporat">perusahaan / instansi pemerintah</label>
-            <br><br>
-        </fieldset>
-        <fieldset>
-            <legend><b>2. rincian pemesanan jasa digital</b></legend>
-            <br>
-            <label for="pilih_paket">pilih paket layanan (lihat katalog di halaman produk)</label>
-            <br>
-            <select name="pilih_paket" id="pilih_paket" required>
-                <option value="">--pilih jasa paket--</option>
-                <option value="silver">paket silver branding (Rp 1.500.000)</option>
-                <option value="gold">paket gold web development (Rp 3.000.000)</option>
-                <option value="platinum">paket platinum full digital transformation (Rp 5.000.000)</option>
-                <option value="custom">konsultasi custom project</option>
-            </select>
-            <br><br>
-
-            <label for="">layanan tambahan (add-ons)</label>
-            <br>
-            <input type="checkbox" id="addon_seo" name="addons[]" value="SEO optimization">
-            <label for="addon_seo">optimasi SEO on_page (=Rp 500.000)</label>
-            <br>
-            <input type="checkbox" id="addon_express" name="addons[]" value="Express Delivery">
-            <label for="addon_express">pengerjaan kilat 3 hari (+Rp 750.000)</label>
-            <br>
-            <input type="checkbox" id="addon_content" name="addons[]" value="Content writig">
-            <label for="addon_content">penulisan konten arikal & copywriting (+Rp 400.000)</label>
-            <br><br>
-
-            <label for="target_selesai">Estimasi target selesai</label>
-            <input type="date" id="target_selesai" name="target_selesai">
-            <br><br>
-            
-            <label for="detail_pesan">Deskripsi / Cataan Khusus Proyek</label><br>
-            <textarea name="detail_pesan" id="detail_pesan" rows="6" cols="50" placeholder="tuliskna gambaran singkat mengenai proyek yang anda inginkan..."></textarea>
-            <br><br>
-        </fieldset>
-        <br>
-
-        <button type="sumbit">kirim pesanan sekarang</button>&nbsp;
-        <button type="reset">bersihkan formulir</button>
-
-        <section>
-            <hr>
-            <h3>kantor & sudio operasional</h3>
-            <p><b>poliban digicraft studio banjarmasin</b><br>
-                gedung labolauriom bisnis digital, kampus politeknik negri banjarmasin <br>
-                JL. brigjen H. hasan basri, kayu tangi, banjarmasin, kalimanatan selatan <br>
-                email: <i>ayislebew</i> | wa: <i>0888888</i></p>
+            <section>
+                <hr>
+                <h3>kantor & sudio operasional</h3>
+                <p><b>poliban digicraft studio banjarmasin</b><br>
+                    gedung labolauriom bisnis digital, kampus politeknik negri banjarmasin <br>
+                    JL. brigjen H. hasan basri, kayu tangi, banjarmasin, kalimanatan selatan <br>
+                    email: <i>ayislebew</i> | wa: <i>0888888</i></p>
 
                 <h4>lokasi studio di google maps:</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.219741087641!2d114.57935537533392!3d-3.295688541124761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a80d47ba6b%3A0x8f5abfaddfe5a2d7!2sPoliteknik%20Negeri%20Banjarmasin!5e0!3m2!1sid!2sid!4v1792482865158!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" 
-                width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </section>
-    </form>
-     </main>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.219741087641!2d114.57935537533392!3d-3.295688541124761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a80d47ba6b%3A0x8f5abfaddfe5a2d7!2sPoliteknik%20Negeri%20Banjarmasin!5e0!3m2!1sid!2sid!4v1792482865158!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin" width="100%" height="250" frameborder="0"
+                    style="border:0;" allowfullscreen=""></iframe>
+            </section>
+        </form>
+    </main>
 
-     <footer>
+    <footer>
         <p align="center">&copy; 2026 poliban digicraft studio - hak cipta dilindungi undang-undang</p>
-     </footer>
-     
+    </footer>
+
 </body>
+
 </html>
