@@ -1,7 +1,20 @@
+:root {
+    --primary-color: #008080;
+    --primary-color: #008080;
+    --secondary-color: #1a252c;
+    --accent-color: #ff9800;
+    --bg-light: #f4f7f6;
+    --text-muted: #000000;
+    --borber-color: #e0e0e0;
+    --shadow-soft: 0 4px 12 px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --transition-fast: all 0.3s ease;
+    --white: #ffffff
+}
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 20;
+    padding: 20;
     box-sizing: border-box;
 }
 
@@ -9,7 +22,7 @@ body {
     font-family: jetbrains-mono, monospace;
     line-height: 1.6;
     color: black;
-    background-color: aliceblue;
+    background-color: rgb(240, 245, 245);
 }
 
 .container {
@@ -21,8 +34,8 @@ body {
 
 
 header {
-    background-color: brown;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 25px 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -45,14 +58,193 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     padding: 6px 14px;
     margin: 0 2px;
     border-radius: 4px;
+    transition: var(--transition-fast);
 }
 
-nav a:hover, nav a.active {
-    background-color: rgba(255, 255, 255, 0.25);
+nav a:hover,
+nav a.active {
+    background-color: rgba(235, 234, 234, 0.25);
     font-weight: bold;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--borber-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-soft);
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 1 1 300px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    transform: var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.pricing-card {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #e0e0e0;
+    color: var(--primary-color);
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.card-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 8px 0 15px 0;
+}
+
+.card-features {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.card-features li {
+    font-size: 0.9rem;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--borber-color);
+    color: #000;
+}
+
+.card-features li::bafore {
+    content: "^ ";
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: auto;
+    transform: var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.pricing-card.features {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.03);
+}
+
+.pricing-card.features:hover {
+    transform: scale(1.1) translate(-8px);
+}
+
+.badge-features {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    font-size: 0.85rem;
 }
